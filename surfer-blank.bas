@@ -37,12 +37,32 @@ Sub Main
     
 	Set MapFrame = Plot.Shapes.AddContourMap(GridFileName:=outblngrid)
 
+'设置色标
 	Dim ContourLayer As Object
 	Set ContourLayer = MapFrame.Overlays(1)
 	ContourLayer.FillForegroundColorMap.LoadFile(SurferApp.Path + "\ColorScales\Rainbow.clr")
 	ContourLayer.LevelMethod = SrfConLevelMethodSimple
 	ContourLayer.FillContours = True
 	ContourLayer.ShowColorScale = True
+
+' 设置坐标名
+	Dim Axes As Object
+ 	Set Axes = MapFrame.Axes
+ 'Assigns the different axes to variable names
+ 		Set BottomAxis = Axes("Bottom axis")
+ 		Set LeftAxis = Axes("Left axis")
+ 		Set RightAxis = Axes("Right axis")
+ 		Set TopAxis = Axes("Top axis")
+
+'Sets the title properties for the axis.
+		TopAxis.Title = " Apparent Resistivity (\f""Symbol"" W×\f""Arial"" m\f""Symbol"" )"
+        TopAxis.TitleFont.Size = 24
+        BottomAxis.Title = "X / m"
+       LeftAxis.Title = "OO'/2 / m"
+        
+
+
+
 
 	Plot.SaveAs(FileName := Dir+"\plot.srf")
 
