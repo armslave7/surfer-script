@@ -29,7 +29,7 @@ Sub Main
 	DataFile = Dir+"\out.txt"
 	OutGrid = Dir + "\out.grd"
     blnFile =  Dir + "\OUT-B.BLN"
-    outblngrid = Dir + "\b_out.bln"
+    outblngrid = Dir + "\b_out.grd"
     
 	SurferApp.GridData (DataFile:=DataFile,xCol:=1, yCol:=2, zCol:=3, Algorithm:=srfKriging, OutGrid:=OutGrid)
     
