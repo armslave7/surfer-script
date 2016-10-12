@@ -18,6 +18,8 @@
 
 - 以后根据需要，将所有格式设置好，然后统一输入字符串
 
+在线浏览代码时，发现脚本内中文显示出问题。
+
 效果如图所示
 
 ![mod1](https://raw.githubusercontent.com/armslave7/surfer-script/dev/fig/mod2.jpg)
